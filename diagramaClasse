@@ -1,0 +1,40 @@
++------------------+
+|      Banco       |
++------------------+
+| - nome: String   |
+| - contas: List<Conta> |
++------------------+
+| + adicionarConta(conta: Conta): void |
+| + listarContas(): void               |
++------------------+
+             |
+             |
+             v
++------------------+
+|     Cliente      |
++------------------+
+| - nome: String   |
++------------------+
+| + getNome(): String |
++------------------+
+
++------------------+     +------------------+
+|     Conta        |<|-->|  ContaCorrente   |
++------------------+     +------------------+
+| - agencia: int   |     |                  |
+| - numero: int    |     +------------------+
+| - saldo: double  |
+| - cliente: Cliente |
++------------------+     +------------------+
+| + depositar(valor: double): void |
+| + sacar(valor: double): void     |
+| + transferir(valor: double, destino: Conta): void |
++------------------+     +------------------+
+             ^
+             |
+             |
++------------------+
+|   ContaPoupanca  |
++------------------+
+|                  |
++------------------+
